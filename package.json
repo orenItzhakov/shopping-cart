@@ -1,18 +1,27 @@
 {
-  "name": "shoppingcart",
+  "name": "shopping-cart",
   "version": "1.0.0",
-  "description": "for shopping!",
-  "main": "script.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orenItzhakov/shopping-cart.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/orenItzhakov/shopping-cart/issues"
+  },
+  "homepage": "https://github.com/orenItzhakov/shopping-cart#readme",
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^4.1.0",
     "express": "^4.16.3",
     "font-awesome": "^4.7.0",
-    "handlebars": "^4.0.10",
-    "jquery": "^3.2.1"
+    "handlebars": "^4.0.11",
+    "jquery": "^3.3.1"
   }
 }

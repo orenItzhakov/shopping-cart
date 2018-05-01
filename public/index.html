@@ -2,8 +2,10 @@
 <html>
 <head>
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+  <link rel="icon" href="icon.png">
+  <!-- <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css"> -->
   <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>Shopping Cart!</title>
 </head>
@@ -29,6 +31,16 @@
             <a href="#" class="view-cart" data-toggle="dropdown" role="button">Shopping Cart <i class="fa fa-shopping-cart"></i></a>
           </li>
         </ul>
+        <div class="col-sm-3 col-md-3">
+          <form class="navbar-form">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search">
+              <div class="input-group-btn">
+                  <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
@@ -41,7 +53,7 @@
     <div class="shopping-cart">
       <p class="cart-title">Items in Cart</p>
       <div class="cart-list"></div>
-      <p>Total: $<span class="total">0</span></p>
+      <p class="pTotal">Total: $<span class="total">0</span></p>
       <button type="button" class="btn clear-cart">Clear Cart</button>
     </div>
 
@@ -95,7 +107,7 @@
         </div>
       </div>
 
-    
+
     </div>
     <div class="row">
       <div class="col-md-4">
@@ -147,7 +159,21 @@
       </div>
     </div>
   </div>
-    <script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
+  <!-- <script id="cart-template" type="text/x-handlebars-template">
+    {{#each items}}
+      <div class="book">
+        <p>{{name}}({{count}}) - {{price}}</p>
+      </div>
+    {{/each}}
+  </script> -->
+  <script id="cart-template" type="text/x-handlebars-template">
+    {{#each items}}
+      <div class="book">
+        <p>{{name}}({{count}}) - ${{mulItems price count}}</p>
+      </div>
+    {{/each}}
+  </script>
+  <script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="handlebars/dist/handlebars.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
